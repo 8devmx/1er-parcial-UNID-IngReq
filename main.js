@@ -1,7 +1,7 @@
 const characters_container = document.querySelector("#characters_container")
-
+const randomPage = Math.floor(Math.random() * 42) + 1
 document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("https://rickandmortyapi.com/api/character", {
+  const response = await fetch(`https://rickandmortyapi.com/api/character?page=${randomPage}`, {
     method: "GET",
     cors: "cors"
   })
